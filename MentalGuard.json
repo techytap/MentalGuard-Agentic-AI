@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "MentalGuard",
+    "tagline": "Protecting Minds, Preserving Lives.",
+    "year": "2026",
+    "footer": "An Agentic AI for Mental Health Awareness & Suicide Prevention"
+  },
+  "welcomeMessage": "Hi, I'm MentalGuard. I'm here to listen, support, and help you through life's challenges. You're not alone—how are you feeling today?",
+  "defaultResponsePlaceholder": "Click a prompt above to begin a conversation with MentalGuard.",
+  "prompts": [
+    {
+      "id": 1,
+      "label": "I'm feeling anxious.",
+      "response": "It's okay to feel anxious. Try taking a few slow breaths and focus on one thing you can control right now."
+    },
+    {
+      "id": 2,
+      "label": "Help me manage stress.",
+      "response": "Take a short break, hydrate, and write down the top three things on your mind. Small steps can make a big difference."
+    },
+    {
+      "id": 3,
+      "label": "Can we do a mood check?",
+      "response": "On a scale of 1 to 10, how would you rate your mood today? Remember, every feeling is temporary."
+    },
+    {
+      "id": 4,
+      "label": "I feel overwhelmed.",
+      "response": "You don't have to handle everything at once. Break tasks into smaller pieces and give yourself permission to rest."
+    },
+    {
+      "id": 5,
+      "label": "Suggest mindfulness exercises.",
+      "response": "Try this: Close your eyes, inhale for 4 seconds, hold for 4, and exhale for 4. Repeat five times."
+    }
+  ],
+  "features": [
+    {
+      "icon": "💙",
+      "title": "Emotional Support",
+      "description": "Empathetic conversations to help users feel heard and supported."
+    },
+    {
+      "icon": "🧠",
+      "title": "Mood Analysis",
+      "description": "Identifies emotional patterns using intelligent sentiment analysis."
+    },
+    {
+      "icon": "🌿",
+      "title": "Wellness Tips",
+      "description": "Provides mindfulness exercises, coping strategies, and self-care tips."
+    },
+    {
+      "icon": "🛟",
+      "title": "Crisis Guidance",
+      "description": "Encourages seeking professional help and support during critical moments."
+    }
+  ],
+  "integration": {
+    "provider": "IBM watsonx Orchestrate",
+    "orchestrationID": "f410731e23c54f4cb9992d4c3cfae0ee_80e0aeee-0030-43ff-96a7-82b87bb70abd",
+    "hostURL": "https://au-syd.watson-orchestrate.cloud.ibm.com",
+    "deploymentPlatform": "ibmcloud",
+    "crn": "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/f410731e23c54f4cb9992d4c3cfae0ee:80e0aeee-0030-43ff-96a7-82b87bb70abd::",
+    "agentId": "c71a8cf2-9231-4889-97be-9ab5476817fa"
+  }
+}
