@@ -1,67 +1,219 @@
 {
-  "app": {
-    "name": "MentalGuard",
-    "tagline": "Protecting Minds, Preserving Lives.",
-    "year": "2026",
-    "footer": "An Agentic AI for Mental Health Awareness & Suicide Prevention"
+  "site": {
+    "name": "MindGuard",
+    "tagline": "Mental Health Awareness & Support",
+    "description": "MindGuard is a quiet place to understand what you're feeling, try a grounding exercise, and find real people to talk to — no account, no judgment, no diagnosis.",
+    "disclaimer": "MindGuard provides general educational information and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified provider with questions about a mental health condition.",
+    "year": 2026
   },
-  "welcomeMessage": "Hi, I'm MentalGuard. I'm here to listen, support, and help you through life's challenges. You're not alone—how are you feeling today?",
-  "defaultResponsePlaceholder": "Click a prompt above to begin a conversation with MentalGuard.",
-  "prompts": [
+
+  "nav": {
+    "logo": "MindGuard",
+    "links": [
+      { "label": "Understand", "href": "#topics" },
+      { "label": "Tools", "href": "#tools" },
+      { "label": "Get Support", "href": "#support" },
+      { "label": "About", "href": "#about" }
+    ],
+    "cta": { "label": "Talk to someone", "href": "#support" }
+  },
+
+  "crisisStrip": {
+    "text": "In immediate danger or crisis? Call 112 (India emergency) or the helplines below — you don't have to go through this alone.",
+    "emergencyNumber": "112"
+  },
+
+  "hero": {
+    "eyebrow": "Mental health awareness & support",
+    "headline": "Your mind deserves the same care as everything else you look after.",
+    "lede": "MindGuard is a quiet place to understand what you're feeling, try a grounding exercise, and find real people to talk to — no account, no judgment, no diagnosis.",
+    "primaryCta": { "label": "Talk to someone now", "href": "#support" },
+    "secondaryCta": { "label": "Try a breathing exercise", "href": "#tools" },
+    "note": "This site offers information and self-care tools — it is not a substitute for professional care."
+  },
+
+  "breathingExercise": {
+    "title": "Guided breathing",
+    "defaultLabel": "Tap start when you're ready",
+    "sequence": [
+      { "phase": "inhale", "text": "Breathe in…", "durationMs": 4000 },
+      { "phase": "hold", "text": "Hold…", "durationMs": 4000 },
+      { "phase": "exhale", "text": "Breathe out…", "durationMs": 6000 }
+    ]
+  },
+
+  "topics": [
     {
-      "id": 1,
-      "label": "I'm feeling anxious.",
-      "response": "It's okay to feel anxious. Try taking a few slow breaths and focus on one thing you can control right now."
+      "id": "anxiety",
+      "name": "Anxiety",
+      "description": "Persistent worry, racing thoughts, or physical tension that doesn't match the moment.",
+      "points": [
+        "Restlessness, a racing heart, or trouble concentrating",
+        "Worry that feels hard to switch off, even when things are okay",
+        "Avoiding situations because of how they might make you feel",
+        "Grounding and breathing exercises can help in the moment"
+      ]
     },
     {
-      "id": 2,
-      "label": "Help me manage stress.",
-      "response": "Take a short break, hydrate, and write down the top three things on your mind. Small steps can make a big difference."
+      "id": "low-mood-depression",
+      "name": "Low Mood & Depression",
+      "description": "A heaviness or flatness that lingers, and makes ordinary things feel harder.",
+      "points": [
+        "Losing interest in things you used to enjoy",
+        "Feeling tired even after rest, or sleeping too much or too little",
+        "Difficulty concentrating or making decisions",
+        "If this lasts more than two weeks, it's worth talking to someone"
+      ]
     },
     {
-      "id": 3,
-      "label": "Can we do a mood check?",
-      "response": "On a scale of 1 to 10, how would you rate your mood today? Remember, every feeling is temporary."
+      "id": "stress-burnout",
+      "name": "Stress & Burnout",
+      "description": "Feeling stretched too thin for too long, at work, school, or home.",
+      "points": [
+        "Feeling cynical, detached, or numb about things that used to matter",
+        "Physical symptoms — headaches, tight shoulders, trouble sleeping",
+        "A drop in the sense that your effort is making a difference",
+        "Small, regular breaks help more than one long one"
+      ]
     },
     {
-      "id": 4,
-      "label": "I feel overwhelmed.",
-      "response": "You don't have to handle everything at once. Break tasks into smaller pieces and give yourself permission to rest."
+      "id": "sleep-difficulties",
+      "name": "Sleep Difficulties",
+      "description": "Trouble falling asleep, staying asleep, or waking up rested.",
+      "points": [
+        "Racing thoughts right when you try to fall asleep",
+        "Waking up frequently through the night",
+        "Sleep and mood affect each other in both directions",
+        "A consistent wind-down routine can help more than it seems"
+      ]
     },
     {
-      "id": 5,
-      "label": "Suggest mindfulness exercises.",
-      "response": "Try this: Close your eyes, inhale for 4 seconds, hold for 4, and exhale for 4. Repeat five times."
+      "id": "grief-loss",
+      "name": "Grief & Loss",
+      "description": "The process of adjusting to losing someone or something important.",
+      "points": [
+        "Grief doesn't move in a straight line — it can come in waves",
+        "There's no fixed timeline for how long it should take",
+        "It's common to feel guilt, anger, or relief alongside sadness",
+        "Talking about the person or thing you lost is usually helpful, not harmful"
+      ]
+    },
+    {
+      "id": "loneliness",
+      "name": "Loneliness",
+      "description": "Feeling disconnected, even when you're around other people.",
+      "points": [
+        "Loneliness is about connection quality, not headcount",
+        "It can affect sleep, mood, and even physical health over time",
+        "Small, low-pressure contact often rebuilds connection faster than big plans",
+        "Peer support groups and helplines exist specifically for this"
+      ]
     }
   ],
-  "features": [
+
+  "tools": {
+    "moodCheckIn": {
+      "title": "How are you, right now?",
+      "subtitle": "A short check-in — naming a feeling can take some of its weight off.",
+      "notePlaceholder": "What's going on, if you want to note it (optional)",
+      "storage": "session-only, not persisted",
+      "moods": [
+        { "emoji": "🙂", "label": "Good" },
+        { "emoji": "😐", "label": "Okay" },
+        { "emoji": "😔", "label": "Low" },
+        { "emoji": "😣", "label": "Anxious" },
+        { "emoji": "😴", "label": "Tired" }
+      ]
+    },
+    "grounding": {
+      "title": "5-4-3-2-1 grounding",
+      "subtitle": "A quick way to steady yourself when things feel like too much.",
+      "steps": [
+        { "count": 5, "title": "5 things you can see", "description": "Look around and name five things you can see right now." },
+        { "count": 4, "title": "4 things you can touch", "description": "Notice four things you can physically feel — the floor, your clothes, the air." },
+        { "count": 3, "title": "3 things you can hear", "description": "Listen for three distinct sounds, near or far." },
+        { "count": 2, "title": "2 things you can smell", "description": "Notice two scents, or think of two you like if none are present." },
+        { "count": 1, "title": "1 thing you can taste", "description": "Notice one taste in your mouth, or take a sip of something." }
+      ]
+    }
+  },
+
+  "supportDirectory": [
     {
-      "icon": "💙",
-      "title": "Emotional Support",
-      "description": "Empathetic conversations to help users feel heard and supported."
+      "region": "India",
+      "availability": "24/7",
+      "name": "Tele-MANAS",
+      "description": "Government of India national mental health helpline, multiple languages.",
+      "number": "14416 or 1-800-891-4416",
+      "hours": "24 hours"
     },
     {
-      "icon": "🧠",
-      "title": "Mood Analysis",
-      "description": "Identifies emotional patterns using intelligent sentiment analysis."
+      "region": "India",
+      "availability": "24/7",
+      "name": "Vandrevala Foundation",
+      "description": "Free, confidential crisis support by phone, chat, and WhatsApp.",
+      "number": "1860-266-2345 / 1800-233-3330",
+      "hours": "24 hours"
     },
     {
-      "icon": "🌿",
-      "title": "Wellness Tips",
-      "description": "Provides mindfulness exercises, coping strategies, and self-care tips."
+      "region": "India",
+      "availability": "Mon–Sat",
+      "name": "iCall (TISS)",
+      "description": "Psychosocial helpline offering counselling by trained professionals.",
+      "number": "022-2552-1111",
+      "hours": "Mon–Sat, 8am–10pm"
     },
     {
-      "icon": "🛟",
-      "title": "Crisis Guidance",
-      "description": "Encourages seeking professional help and support during critical moments."
+      "region": "India",
+      "availability": "24/7",
+      "name": "AASRA",
+      "description": "Crisis intervention for those feeling distressed, lonely, or suicidal.",
+      "number": "+91 98204 66726",
+      "hours": "24 hours"
+    },
+    {
+      "region": "United States & Canada",
+      "availability": "24/7",
+      "name": "988 Suicide & Crisis Lifeline",
+      "description": "Call or text for free, confidential crisis support.",
+      "number": "988",
+      "hours": "24 hours"
+    },
+    {
+      "region": "United Kingdom & Ireland",
+      "availability": "24/7",
+      "name": "Samaritans",
+      "description": "Free, confidential emotional support for anyone struggling to cope.",
+      "number": "116 123",
+      "hours": "24 hours"
     }
   ],
-  "integration": {
-    "provider": "IBM watsonx Orchestrate",
-    "orchestrationID": "f410731e23c54f4cb9992d4c3cfae0ee_80e0aeee-0030-43ff-96a7-82b87bb70abd",
-    "hostURL": "https://au-syd.watson-orchestrate.cloud.ibm.com",
-    "deploymentPlatform": "ibmcloud",
-    "crn": "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/f410731e23c54f4cb9992d4c3cfae0ee:80e0aeee-0030-43ff-96a7-82b87bb70abd::",
-    "agentId": "c71a8cf2-9231-4889-97be-9ab5476817fa"
+
+  "emergencyNote": "If you or someone else is in immediate physical danger, call your local emergency number right away (112 in India, 911 in the US, 999 in the UK) or go to the nearest emergency room.",
+
+  "about": {
+    "eyebrow": "Why MindGuard exists",
+    "headline": "Awareness first, stigma last.",
+    "paragraphs": [
+      "Most people wait years before talking to anyone about what they're carrying. MindGuard exists to close that gap a little — with plain-language information, tools you can use in under two minutes, and a clear path to real support.",
+      "We don't diagnose, sell anything, or track you. This page works the same with or without an internet connection, on purpose."
+    ],
+    "stats": [
+      { "value": "1 in 7", "label": "People experience a mental health condition" },
+      { "value": "24/7", "label": "Helplines listed below" },
+      { "value": "0", "label": "Data stored or sold" },
+      { "value": "2 min", "label": "To try a grounding tool" }
+    ]
+  },
+
+  "newsletter": {
+    "headline": "One gentle reminder, monthly.",
+    "subtitle": "A short note with one self-care idea and one thing worth knowing. No spam, unsubscribe any time.",
+    "ctaLabel": "Subscribe"
+  },
+
+  "footer": {
+    "note": "© 2026 MindGuard. Informational only — not a substitute for professional care.",
+    "subnote": "Made for quiet, private use."
   }
 }
